@@ -14,6 +14,7 @@ install_docker () {
     pushd /vagrant/archives/deb
 
     sudo dpkg -i *.deb
+    sudo usermod -aG docker vagrant
 
     popd
   fi

@@ -19,7 +19,8 @@ Vagrant.configure(2) do |config|
       node.vm.synced_folder '.', '/vagrant', type: 'virtualbox'
 
       ip = "#{ip_prefix}#{i+100}"
-      node.vm.network 'private_network', ip: ip,  virtualbox__intnet: true
+      # node.vm.network 'private_network', ip: ip,  virtualbox__intnet: true
+      node.vm.network 'private_network', ip: ip
       node.vm.provider :virtualbox do |vb|
         vb.gui = $vm_gui
         vb.memory = $vm_memory
