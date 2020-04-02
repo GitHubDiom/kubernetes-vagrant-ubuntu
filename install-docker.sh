@@ -43,6 +43,9 @@ install_k3s () {
 
     popd
   fi
+  pushd /vagrant/archives
+  docker load -i docker-pause-3.1.tar
+  popd
 }
 
 
