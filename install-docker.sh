@@ -17,6 +17,12 @@ install_docker () {
     sudo usermod -aG docker vagrant
 
     popd
+
+    pushd /vagrant/archives
+    docker load -i docker-pause-3.1.tar
+    sudo cp -v docker-daemon.json /etc/docker/daemon.json
+    sudo systemctl restart docker
+    popd
   fi
 }
 
@@ -43,9 +49,6 @@ install_k3s () {
 
     popd
   fi
-  pushd /vagrant/archives
-  docker load -i docker-pause-3.1.tar
-  popd
 }
 
 
