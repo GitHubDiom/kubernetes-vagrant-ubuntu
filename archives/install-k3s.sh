@@ -299,7 +299,7 @@ setup_tmp() {
 
 # --- use desired k3s version if defined or find latest ---
 get_release_version() {
-    INSTALL_K3S_VERSION=v1.0.0
+    INSTALL_K3S_VERSION=v1.25.5
     if [ -n "${INSTALL_K3S_VERSION}" ]; then
         VERSION_K3S=${INSTALL_K3S_VERSION}
     else

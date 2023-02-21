@@ -6,3 +6,5 @@ config.ign
 config.ign.merged
 *.vmdk
 *.img
+share/
+node-token
